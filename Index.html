@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homework 4 - Software Development</title>
+  <script src="scripts.js" defer></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to my homepage</h1>
+    <h2>Personal Details</h2>
+    <form id="studentForm">
+      <div class="row">
+
+        <div class="column">
+          <p><strong>First Name:</strong></p>
+          <!-- <input type="text" id="firstName" name="firstName" required>
+          <span id="firstNameError" style="color: red; display: none;">Only alphabetic characters are allowed.</span> -->
+          <input type="text" id="firstName" name="firstName" required pattern="[A-Za-z]+">
+          <span id="firstNameError" class="error">Only alphabetic characters are allowed.</span>
+
+          <p><strong>Middle Initial:</strong></p>
+          <input type="text" id="middleInitial" name="middleInitial" maxlength="1" required>
+
+          <p><strong>Last Name:</strong></p>
+          <input type="text" id="lastName" name="lastName" required>
+          <span id="lastNameError" style="color: red; display: none;">Only alphabetic characters are allowed.</span>
+          
+          <p><strong>Country:</strong></p>
+          <select id="country" name="country" required>
+            <option value="">Select your country</option>
+            <option value="Germany">Germany</option>
+            <option value="USA">USA</option>
+            <option value="India">India</option>
+            <option value="France">France</option>
+            <option value="China">China</option>
+            <option value="Australia">Australia</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="column">
+          <p><strong>Matriculation Number:</strong></p>
+          <input type="text" id="matriculation" name="matriculation" required>
+          <span id="matriculationPatternError" style="color: red; display: none;">Matriculation number must contain only digits</span>
+
+          <p><strong>Graduate Program:</strong></p>
+          <select id="program" name="program" required>
+            <option value="">Select your program</option>
+            <option value="CS">Computer Science</option>
+            <option value="AI">Artificial Intelligence</option>
+            <option value="DS">Data Science</option>
+          </select>
+
+          <p><strong>Semester:</strong></p>
+          <select id="Semester" name="Semester" required>
+            <option value="">Select your Semester</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+
+          <p><strong>Semester Start Date:</strong></p>
+          <input type="date" id="startDate" name="startDate" required>
+        </div>
+        
+      </div>
+      
+      <!-- <p><strong>I heard about this graduate program from:</strong></p>
+      <div class="options">
+        <input type="checkbox" id="media" name="source" value="Media" required>
+        <label for="media">Social Media</label>
+
+        <input type="checkbox" id="ad" name="source" value="Advertisement">
+        <label for="ad">Advertisement</label>
+
+        <input type="checkbox" id="agency" name="source" value="Agency">
+        <label for="agency">Foreign Agency</label>
+
+        <input type="checkbox" id="other" name="source" value="Other">
+        <label for="other">Other</label>
+      
+
+        
+        <div class="media1-source">
+          <p><strong>When i finish my program:</strong></p>
+          <div class="options">
+            <input type="radio" id="media" name="source" value="Media" required>
+            <label for="media">Return back to my country:</label>
+  
+            <input type="radio" id="ad" name="source" value="Advertisement">
+            <label for="ad">Find a job here in Europe:</label>
+  
+            <input type="radio" id="agency" name="source" value="Agency">
+            <label for="agency">Do some pratical training and think after this:</label>
+  
+            <input type="radio" id="other" name="source" value="Other">
+            <label for="other">Other</label> -->
+ 
+            <legend>I heard about this graduate program from:</legend>
+            <div class="radio-group">
+               <label>
+               <input type="checkbox" name="source" value="Media" required>
+               Media
+               </label>
+               <label>
+               <input type="checkbox" name="source" value="Ad">
+               Ad
+               </label>
+               <label>
+               <input type="checkbox" name="source" value="Agency">
+               Agency
+               </label>
+               <label>
+               <input type="checkbox" name="source" value="Other">
+               Other
+               </label>
+            </div>
+            <legend >When i finish my studies i will:</legend>
+            <div >
+               <label>
+               <input type="radio" name="source" value="Return to my country" required>
+               Return to my country
+               </label>
+               <label>
+               <input type="radio" name="source" value="Find a job in europe">
+               Find a job in europe
+               </label>
+               <label>
+               <input type="radio" name="source" value="Do a practical training and then decide">
+               Do a practical training and then decide
+               </label>
+            </div>
+    
+      <p><strong>Feedback:</strong></p>
+      <textarea id="feedback" name="feedback" rows="5" required>The Software Development course was well-structured and easy to follow, making complex topics easy to understand. The practical exercises helped reinforce cooding knowldge and key concepts. A great course for beginners</textarea>
+  
+      <hr>
+      <div class="content">
+      
+        <p><strong>I will write a pragraph for each Methodologies of <a href="https://www.geeksforgeeks.org/software-development-life-cycle-sdlc/" target="_blank">SDLC</a> and there are many of them but i suggest a few and reasons are as follows:</strong></p>
+        <ul>
+          <li>Agile methodologies</li>
+          <li>Scrum and Kanban</li>
+          <li>Extreme Programming (XP)</li>
+        </ul>
+        <p><strong>Among so many SDLC Methodologies, the ones that are in the <a href="https://agilemanifesto.org/" target="_blank">AGILE</a> classification are better. Among AGILE SDLC Methods, I have also a few suggestions:</strong></p>
+        <ul>
+          <li>Scrum</li>
+          <li>Kanban</li>
+          <li>Extreme Programming (XP)</li>
+        </ul>
+        <p><strong>In this software development and application course of <a href="https://www.srh-university.de/de/unsere-standorte/berlin/" target="_blank">SRH</a>, we learn the following:</strong></p>
+        <ul>
+          <li>Waterfall Model</li>
+          <li>Agile Methodologies</li>
+          <li>Spiral Model</li>
+        </ul>
+        <p><strong>I have used <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">CSS</a> in this webpage, and there are three ways to include CSS in a webpage as follows:</strong></p>
+        <ul>
+          <li>Inline CSS</li>
+          <li>Internal CSS</li>
+          <li>External CSS</li>
+        </ul>
+        <p><strong>The reasons <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">CSS</a> is used in the webpage are:</strong></p>
+        <ul>
+          <li>To style and visually enhance the webpage.</li>
+          <li>To separate content from presentation.</li>
+          <li>To ensure consistency across multiple pages.</li>
+        </ul>
+        <p><strong>We also use <a href="https://www.w3schools.com/js/" target="_blank">JavaScript</a> in webpage development. The main reasons are as follows:</strong></p>
+        <ul>
+          <li>To add interactivity to the webpage.</li>
+          <li>To validate user inputs dynamically.</li>
+          <li>To enhance the user experience.</li>
+        </ul>
+              <p><strong>I have done this project myself and accept the consequences if found otherwise.</strong></p>
+        <p><strong>You can reach me at:</strong></p>
+      
+          <p><strong>Email: Maheshsjps1@gmail.com </strong></p>
+          <input type="email" id="email" name="email" required>
+                <span id="emailPattern" class="error">Invalid email format.</span>
+          
+          </div>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
